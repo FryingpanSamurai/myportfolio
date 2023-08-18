@@ -124,6 +124,7 @@ body {
     height: 40%;
     margin: 0;
     font-family: Tahoma;
+    color: #111;
 }
 
 .project-tile {
@@ -164,6 +165,13 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
+    color: #111;
+}
+
+#tba > i {
+    color: #111;
+    padding: 5px;
+    font-size: 24pt;
 }
 
 .project-tile a{
@@ -182,6 +190,70 @@ body {
     text-align: center;
 }
 
+#contact-modal {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 99;
+    transition: background-color 1s, display 1s;
+}
+
+#contact-modal-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    width: 80%;
+    padding: 10px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+#cm-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#cmh-frow {
+    width: 100%;
+    text-align: right;
+    padding: 5px;
+    font-size: large;
+}
+
+#cmh-srow {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Consolas', 'Lucida Sans Unicode', sans-serif;
+    font-size: 18pt;
+}
+
+#cm-body {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    font-size: large;
+    color: #111;
+}
+
+#cm-form {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+#request {
+    height: 50px;
+    text-overflow: ellipsis;
+}
+
 #contact-section ul {
     display: flex;
     justify-content: center;
@@ -195,6 +267,7 @@ body {
     padding: 10px 30px;
     font-size: 35pt;
     color: #333;
+    transition: 1s color;
 }
 
 #contact-section ul>li a{
@@ -204,6 +277,11 @@ body {
 
 #contact-section ul>li a:hover{
     color: cornflowerblue;
+}
+
+#contact-section ul>li:hover {
+    color: cornflowerblue;
+    cursor: pointer;
 }
 
 #contact-header {
@@ -228,6 +306,24 @@ body {
     margin-bottom: 40px;
 }
 
+input {
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #111;
+    border: #555 solid 1px;
+    border-radius: 5px;
+    color: #DDD;
+    padding: 5px;
+    width: 50%;
+    margin: auto;
+}
+
 /* FOOTER */
 #footer {
     display: flex;
@@ -238,6 +334,7 @@ body {
     height: 40px;
     width: 100%;
     background-color: #333;
+    z-index: 100;
 }
 
 /* MEDIA RULES */
@@ -277,5 +374,9 @@ body {
 
     .project-img{
         height: 250%;
+    }
+
+    #contact-modal-wrapper {
+        width: 40%;
     }
 }

@@ -5,7 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./static/newlogo.svg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/f673d93f14.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function showModal() {
+            let mymodal = document.getElementById('contact-modal');
+            mymodal.style.display = 'flex';
+        }
+
+        function exitModal() {
+            let mymodal = document.getElementById('contact-modal');
+            mymodal.style.display = 'none';
+        }
+
+        function sendEmail() {
+
+            console.log();
+        }
+    </script>
     <script src="https://kit.fontawesome.com/f673d93f14.js" crossorigin="anonymous"></script>
     <title>My Portfolio</title>
 </head>
@@ -18,6 +35,30 @@
             <a id="contact" href="#contact-section">contact</a>
         </nav>
     </header>
+    <div id="contact-modal">
+        <div id="contact-modal-wrapper">
+            <!-- I think it would be cool to have like a little pixel summoner or like the guy from the messenger (Qarg?) -->
+            <span id="cm-header">
+                <span id="cmh-frow"><i class="fas fa-times" onclick="exitModal()"></i></span>
+                <span id="cmh-srow">
+                    Did someone summon a developer?
+                </span>
+            </span>
+            <span id="cm-body">
+                <div>
+                    Email feature coming soon, please contact me via <strong>bpatricka@live.com</strong> for any business queries...
+                </div>
+                <!-- <form action="sendEmail()" id="cm-form">
+                    <label for="cname">Name</label>
+                    <input type="text" id="cname">
+                    <label for="request">Request</label>
+                    <input type="textarea" placeholder="please be sure to include your contact information, requested application, etc." id="request">
+                    <button type="submit">Submit Request</button>
+                </form> -->
+            </span>
+            <span class="cm-footer"></span>
+        </div>
+    </div>
     <main id="main">
         <div class="ws-wrapper">
             <section id="welcome-section">
@@ -44,7 +85,7 @@
                     <li class="project-tile">
                         <a href="https://github.com/bpatricka">
                             <div class="pt-img-wrapper">
-                                <img class="project-img" src="./static/csAssist.PNG" alt="csAssist application preview">
+                                <img class="project-img" src="./static/csAssistA.PNG" alt="csAssist application preview">
                             </div>
                         </a>
                         <p class="tile-title">
@@ -87,7 +128,7 @@
                     </li>
                     <li class="project-tile">
                         <a href="https://github.com/FryingpanSamurai">
-                            <p id="tba">Actively developing on GitHub...</p>
+                            <p id="tba">...more on my <i class="fab fa-github"></i></p>
                         </a>
                     </li>
                 </ul>
@@ -101,7 +142,7 @@
                 <h2 id="contact-title">always LFW</h2>
                 <code id="contact-subtitle">() =&gt; { 
                     <br> 
-                    providing solutions to stakeholders via web and desktop applications 
+                    providing solutions to stakeholders <br>via web and desktop applications 
                     <br>
                     Current favorite languages/frameworks: Python, Svelte, Django 
                     <br>
@@ -114,7 +155,7 @@
                         <i class="fab fa-github"></i>
                     </a>
                 </li>
-                <li id="email-link">
+                <li id="email-link" onclick="showModal()">
                     <!-- need to implement JS email script -->
                     <i class="fas fa-at"></i>
                 </li>
